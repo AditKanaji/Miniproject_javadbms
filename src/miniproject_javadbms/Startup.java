@@ -41,8 +41,18 @@ public class Startup extends javax.swing.JFrame {
         });
 
         employee.setText("Employee");
+        employee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeeActionPerformed(evt);
+            }
+        });
 
         admin.setText("Admin");
+        admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminActionPerformed(evt);
+            }
+        });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("TYPE OF USER");
@@ -87,6 +97,18 @@ public class Startup extends javax.swing.JFrame {
              l.setLocationRelativeTo(null);
              this.dispose();
     }//GEN-LAST:event_customerActionPerformed
+
+    private void adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adminActionPerformed
+
+    private void employeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeActionPerformed
+        // TODO add your handling code here:
+        employee_login l = new employee_login();
+             l.setVisible(true);
+             l.setLocationRelativeTo(null);
+             this.dispose();
+    }//GEN-LAST:event_employeeActionPerformed
 
     /**
      * @param args the command line arguments

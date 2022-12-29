@@ -40,6 +40,15 @@
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
     </Container>
+    <Component class="javax.swing.JMenuItem" name="jMenuItem1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jMenuItem1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -93,7 +102,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="male" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="female" pref="70" max="32767" attributes="0"/>
+                                      <Component id="female" pref="194" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="lname" max="32767" attributes="0"/>
                                   <Component id="email" max="32767" attributes="0"/>
@@ -110,11 +119,21 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cashier" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="manager" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="cleaner" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="security" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="accountant" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="waiter" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="security" min="-2" pref="98" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="cashier" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="cleaner" min="-2" pref="98" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="technician" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="manager" min="-2" pref="98" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -172,29 +191,34 @@
                   <Component id="female" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel12" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="cashier" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="cleaner" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel12" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="waiter" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="security" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="technician" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="manager" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="cashier" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="cleaner" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="security" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="accountant" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="password" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="confirm_password" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="confirm_password" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="submit" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
@@ -269,6 +293,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="YYYY-MM-DD"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dobActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="submit">
       <Properties>
@@ -320,14 +347,6 @@
         <Property name="text" type="java.lang.String" value="Employee type"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="manager">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Manager"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="managerActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JRadioButton" name="cashier">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cashier"/>
@@ -340,15 +359,34 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cleaner"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cleanerActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="waiter">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Waiter"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="waiterActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="security">
       <Properties>
         <Property name="text" type="java.lang.String" value="Security"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="accountant">
+    <Component class="javax.swing.JRadioButton" name="technician">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Accountant"/>
+        <Property name="text" type="java.lang.String" value="Technician"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="technicianActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="manager">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Manager"/>
       </Properties>
     </Component>
   </SubComponents>
