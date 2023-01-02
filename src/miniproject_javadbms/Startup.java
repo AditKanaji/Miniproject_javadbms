@@ -28,7 +28,6 @@ public class Startup extends javax.swing.JFrame {
 
         customer = new javax.swing.JButton();
         employee = new javax.swing.JButton();
-        admin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,8 +46,6 @@ public class Startup extends javax.swing.JFrame {
             }
         });
 
-        admin.setText("Admin");
-
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("TYPE OF USER");
 
@@ -59,11 +56,9 @@ public class Startup extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(customer)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addComponent(employee)
-                .addGap(47, 47, 47)
-                .addComponent(admin)
-                .addGap(39, 39, 39))
+                .addGap(72, 72, 72))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -77,8 +72,7 @@ public class Startup extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(customer)
-                    .addComponent(employee)
-                    .addComponent(admin))
+                    .addComponent(employee))
                 .addGap(106, 106, 106))
         );
 
@@ -134,7 +128,6 @@ public class Startup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton admin;
     private javax.swing.JButton customer;
     private javax.swing.JButton employee;
     private javax.swing.JLabel jLabel1;
