@@ -115,12 +115,6 @@ public class create_account_customer extends javax.swing.JFrame {
 
         jLabel9.setText("Username:");
 
-        username.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameActionPerformed(evt);
-            }
-        });
-
         jLabel10.setText("New Password:");
 
         jLabel11.setText("Confirm Password:");
@@ -298,10 +292,6 @@ public class create_account_customer extends javax.swing.JFrame {
     private void femaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_femaleActionPerformed
-
-    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usernameActionPerformed
 
     /**
      * @param args the command line arguments

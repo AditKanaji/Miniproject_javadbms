@@ -34,10 +34,10 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
                                   <Component id="submit" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -45,16 +45,17 @@
                                       <Component id="jLabel3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="73" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="password" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="username" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="username" pref="71" max="32767" attributes="0"/>
+                                      <Component id="password" max="32767" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="133" max="32767" attributes="0"/>
+              <EmptySpace pref="115" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -100,8 +101,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="username">
     </Component>
-    <Component class="javax.swing.JTextField" name="password">
-    </Component>
     <Component class="javax.swing.JButton" name="submit">
       <Properties>
         <Property name="text" type="java.lang.String" value="Submit"/>
@@ -117,6 +116,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="create_accountActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="password">
     </Component>
   </SubComponents>
 </Form>

@@ -47,9 +47,6 @@ public class create_account_employee extends javax.swing.JFrame {
         jPopupMenu2 = new javax.swing.JPopupMenu();
         jPopupMenu3 = new javax.swing.JPopupMenu();
         jPopupMenu4 = new javax.swing.JPopupMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        buttonGroup2 = new javax.swing.ButtonGroup();
-        buttonGroup3 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -74,17 +71,14 @@ public class create_account_employee extends javax.swing.JFrame {
         male = new javax.swing.JRadioButton();
         female = new javax.swing.JRadioButton();
         jLabel12 = new javax.swing.JLabel();
+        manager = new javax.swing.JRadioButton();
         cashier = new javax.swing.JRadioButton();
         cleaner = new javax.swing.JRadioButton();
-        waiter = new javax.swing.JRadioButton();
         security = new javax.swing.JRadioButton();
-        technician = new javax.swing.JRadioButton();
-        manager = new javax.swing.JRadioButton();
+        accountant = new javax.swing.JRadioButton();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
-
-        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,11 +119,6 @@ public class create_account_employee extends javax.swing.JFrame {
         });
 
         dob.setText("YYYY-MM-DD");
-        dob.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dobActionPerformed(evt);
-            }
-        });
 
         submit.setText("Submit");
         submit.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +150,13 @@ public class create_account_employee extends javax.swing.JFrame {
 
         jLabel12.setText("Employee type");
 
+        manager.setText("Manager");
+        manager.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                managerActionPerformed(evt);
+            }
+        });
+
         cashier.setText("Cashier");
         cashier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,29 +165,10 @@ public class create_account_employee extends javax.swing.JFrame {
         });
 
         cleaner.setText("Cleaner");
-        cleaner.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cleanerActionPerformed(evt);
-            }
-        });
-
-        waiter.setText("Waiter");
-        waiter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                waiterActionPerformed(evt);
-            }
-        });
 
         security.setText("Security");
 
-        technician.setText("Technician");
-        technician.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                technicianActionPerformed(evt);
-            }
-        });
-
-        manager.setText("Manager");
+        accountant.setText("Accountant");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -224,7 +201,7 @@ public class create_account_employee extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(male)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(female, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
+                                        .addComponent(female, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
                                     .addComponent(lname)
                                     .addComponent(email)
                                     .addComponent(phone_no)
@@ -238,18 +215,11 @@ public class create_account_employee extends javax.swing.JFrame {
                                 .addGap(110, 110, 110))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(waiter, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(security, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(cashier, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(cleaner, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(technician, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(manager, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(cashier, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(manager, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cleaner, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(security, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(accountant, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
@@ -292,28 +262,26 @@ public class create_account_employee extends javax.swing.JFrame {
                     .addComponent(male)
                     .addComponent(female))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cashier))
-                    .addComponent(cleaner))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(waiter)
-                    .addComponent(security))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(technician)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(manager))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cashier)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cleaner)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(security)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(accountant)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(confirm_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                    .addComponent(confirm_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(submit)
                 .addGap(23, 23, 23))
         );
@@ -335,7 +303,7 @@ public class create_account_employee extends javax.swing.JFrame {
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
         // TODO add your handling code here:
-        String username,fname,mname,lname,email,dob, gender,phone_no,type;
+        String username,fname,mname,lname,email,dob, gender,phone_no;
         String password,confirm_password;
         username=this.username.getText();
         fname=this.fname.getText();
@@ -356,32 +324,11 @@ public class create_account_employee extends javax.swing.JFrame {
         else{
             gender = "-";
         }
-        if(cashier.isSelected()){
-            type="cashier";
-        }
-        else if(cleaner.isSelected()){
-            type="cleaner";
-        }
-        else if(waiter.isSelected()){
-            type="waiter";
-        }
-        else if(security.isSelected()){
-            type="security";
-        }
-        else if(technician.isSelected()){
-            type="technician";
-        }
-        else if(manager.isSelected()){
-            type="manager";
-        }
-        else{
-            type="-";
-        }
-        if(username !=null && fname!=null && mname !=null &&lname!=null && email!=null && dob!=null && phone_no!= null && gender!=null &&type!=null){
+        if(username !=null && fname!=null && mname !=null &&lname!=null && email!=null && dob!=null && phone_no!= null && gender!=null ){
             if(password.equals(confirm_password)){
                 try{
                         conn= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/abcinema?user=root&password=1234");
-                        ps = conn.prepareStatement("insert into abcinema.employee(username,fname,mname,lname,email,phone_no,dob,password,gender,type) values(?,?,?,?,?,?,?,?,?,?)");
+                        ps = conn.prepareStatement("insert into abcinema.customer(username,fname,mname,lname,email,phone_no,dob,password,gender) values(?,?,?,?,?,?,?,?,?)");
                         ps.setString(1, username);
                         ps.setString(2, fname);
                         ps.setString(3,mname);
@@ -391,9 +338,8 @@ public class create_account_employee extends javax.swing.JFrame {
                         ps.setString(7,dob);
                         ps.setString(8,password);
                         ps.setString(9,gender);
-                        ps.setString(10,type);
                         ps.executeUpdate();
-                        employee_login l = new employee_login();
+                        customer_login l = new customer_login();
              l.setVisible(true);
              l.setLocationRelativeTo(null);
              this.dispose();
@@ -416,25 +362,13 @@ public class create_account_employee extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_confirm_passwordActionPerformed
 
-    private void dobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dobActionPerformed
+    private void managerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dobActionPerformed
-
-    private void cleanerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cleanerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cleanerActionPerformed
-
-    private void waiterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waiterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_waiterActionPerformed
+    }//GEN-LAST:event_managerActionPerformed
 
     private void cashierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashierActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cashierActionPerformed
-
-    private void technicianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_technicianActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_technicianActionPerformed
 
     /**
      * @param args the command line arguments
@@ -475,9 +409,8 @@ public class create_account_employee extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton accountant;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JRadioButton cashier;
     private java.awt.Choice choice2;
     private javax.swing.JRadioButton cleaner;
@@ -499,7 +432,6 @@ public class create_account_employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JPopupMenu jPopupMenu3;
@@ -514,8 +446,6 @@ public class create_account_employee extends javax.swing.JFrame {
     private javax.swing.JTextField phone_no;
     private javax.swing.JRadioButton security;
     private javax.swing.JButton submit;
-    private javax.swing.JRadioButton technician;
     private javax.swing.JTextField username;
-    private javax.swing.JRadioButton waiter;
     // End of variables declaration//GEN-END:variables
 }
