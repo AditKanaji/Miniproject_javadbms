@@ -56,7 +56,7 @@ public class customer_homepage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -86,7 +86,7 @@ public class customer_homepage extends javax.swing.JFrame {
             }
         });
 
-        book_ticket1.setBackground(new java.awt.Color(51, 153, 255));
+        book_ticket1.setBackground(new java.awt.Color(0, 153, 255));
         book_ticket1.setText("View Ticket");
         book_ticket1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
